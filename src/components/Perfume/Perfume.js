@@ -1,12 +1,18 @@
 import React from 'react';
+import './Perfume.css'
 
 const Perfume = (props) => {
-    const { name, price, img } = props.perfume;
+    const { handleCart, perfume } = props
+    const { name, price, img } = perfume;
+
     return (
-        <div>
-            <img src={img} alt="" />
-            <h3>Product Name: {name}</h3>
-            <p>Price: {price}</p>
+        <div className='perfume-container'>
+            <div className='perfume'>
+                <img src={img} alt="" />
+                <h3>{name}</h3>
+                <p>Price: ${price}</p>
+            </div>
+            <button className='btn-add' onClick={() => handleCart(perfume)}>ADD TO CART</button>
         </div>
     );
 };

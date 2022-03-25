@@ -44,7 +44,7 @@ const Shop = () => {
                 }
             </div>
             <div className="cart-container">
-                <h3 className='cart-name'>This is Cart</h3>
+
                 {
                     <Cart cart={cart}
                         removeItem={removeItem}

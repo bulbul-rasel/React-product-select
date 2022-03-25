@@ -12,10 +12,6 @@
 .cart-container{
     background-color: rgb(212, 154, 230);
 }
-.cart-name{
-    color: white;
-    text-align: center;
-}
 
 @media screen and (max-width: 900px) {
     .product-container{

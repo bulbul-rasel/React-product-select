@@ -4,7 +4,7 @@ const Cart = (props) => {
     const { removeItem, chooseOne, cart } = props;
     return (
         <div className='cart'>
-
+            <h3 className='cart-name'>This is Cart</h3>
             {
                 cart.map((item) => (
                     <h5 className='perfume-name'>{item.name}</h5>

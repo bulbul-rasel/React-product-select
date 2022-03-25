@@ -18,11 +18,19 @@ const Shop = () => {
         setCart(newCart)
     }
 
-    const removeItem = (cart) => {
+    const removeItem = () => {
 
         setCart([]);
     }
-
+    const chooseOne = (cart) => {
+        var array = [];
+        for (var i = cart.length - 1; i >= 0; i--) {
+            array[i] = i;
+        }
+        const count = Math.floor(Math.random() * array.length)
+        console.log(count);
+        alert(cart[count].name);
+    }
 
     return (
         <div className='product'>
@@ -39,7 +47,9 @@ const Shop = () => {
                 <h3 className='cart-name'>This is Cart</h3>
                 {
                     <Cart cart={cart}
-                        removeItem={removeItem}></Cart>
+                        removeItem={removeItem}
+                        chooseOne={chooseOne}
+                    ></Cart>
                 }
             </div>
         </div>

@@ -1,0 +1,21 @@
+.cart{
+    position: sticky;
+    top: 0;
+    padding: 30px 23px;
+}
+.choose-one, .remove-btn{
+    width: 100%;
+    height: 40px;
+    background-color: blueviolet;
+    color: azure;
+    border-radius: 5px;
+    border: 0;
+    margin-bottom: 5px;
+}
+.remove-btn:hover{
+    background-color: red;
+}
+
+.choose-one:hover{
+    background-color: green;
+}

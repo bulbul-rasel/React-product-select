@@ -11,11 +11,19 @@ const Shop = () => {
             .then(res => res.json())
             .then(data => setPerfumes(data))
     }, [])
+
     const handleCart = (perfumes) => {
         console.log(cart);
         const newCart = [...cart, perfumes]
         setCart(newCart)
     }
+
+    const removeItem = (cart) => {
+
+        setCart([]);
+    }
+
+
     return (
         <div className='product'>
             <div className="product-container">
@@ -30,7 +38,8 @@ const Shop = () => {
             <div className="cart-container">
                 <h3 className='cart-name'>This is Cart</h3>
                 {
-                    <Cart cart={cart}></Cart>
+                    <Cart cart={cart}
+                        removeItem={removeItem}></Cart>
                 }
             </div>
         </div>

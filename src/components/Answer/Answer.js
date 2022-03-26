@@ -1,8 +1,10 @@
 import React from 'react';
+import './answer.css'
 
 const Answer = () => {
     return (
-        <div>
+        <div className='answer'>
+            <h1 className='title'>Question - Answer</h1>
             <h3>Q1. How Works React?</h3>
             <p> React.js is JavaScript library and it generally thought of as the view in an application. React is a single page application. So, it works with virtual DOM. React basically maintain like a tree with some leaf like nodes. React allows re-construct DOM with help of virtual DOM. React use JSX which convert HTML to JavaScript object.</p>
 

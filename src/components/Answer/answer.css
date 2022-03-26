@@ -1,0 +1,10 @@
+.answer{
+    padding: 20px;
+    margin-top: 20px;
+    background-color: blueviolet;
+    border-radius: 5px;
+}
+.title{
+    text-align: center;
+    color: white;
+}

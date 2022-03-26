@@ -12,6 +12,7 @@
 .perfume-img{
     width: 20%;
     margin-right: 10px;
+    border-radius: 50%;
 }
 .perfume-name{
     color: white;

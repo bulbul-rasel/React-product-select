@@ -13,24 +13,25 @@ const Shop = () => {
     }, [])
 
     const handleCart = (perfumes) => {
-        console.log(cart);
         const newCart = [...cart, perfumes]
+        if (newCart.length <= 4) {
+            setCart(newCart)
+        }
+        else {
+            alert("Can not Select More Than 4 Items");
+        }
 
-        setCart(newCart)
     }
 
     const removeItem = () => {
 
         setCart([]);
     }
-    const chooseOne = (cart) => {
-        var array = [];
-        for (var i = cart.length - 1; i >= 0; i--) {
-            array[i] = i;
-        }
-        const count = Math.floor(Math.random() * array.length)
-        console.log(count);
-        alert(cart[count].name);
+    const chooseOne = () => {
+        var array = [...cart];
+        const count = array[Math.floor(Math.random() * array.length)]
+        alert(count.name);
+        // setCart([count])
     }
 
     return (
@@ -49,6 +50,7 @@ const Shop = () => {
                 {
                     <Cart cart={cart}
                         removeItem={removeItem}
+                        key={cart.id}
                         chooseOne={chooseOne}
                     ></Cart>
                 }

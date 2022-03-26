@@ -15,6 +15,7 @@ const Shop = () => {
     const handleCart = (perfumes) => {
         console.log(cart);
         const newCart = [...cart, perfumes]
+
         setCart(newCart)
     }
 
